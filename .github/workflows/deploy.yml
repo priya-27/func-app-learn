@@ -1,4 +1,4 @@
-name: Deploy Azure Function App Try 1
+name: Deploy Azure Function App Try
 
 on:
   push:
@@ -23,9 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy to Azure Function App Trial
+    - name: Deploy to Azure Function App
       uses: Azure/functions-action@v1
       with:
         app-name: demofunc-tester-dev
         package: .
-        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+        publish-profile: ${{ secrets.suman }}
